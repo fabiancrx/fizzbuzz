@@ -1,7 +1,4 @@
 {
     "@@locale": "es",
-    "noACounterAppBarTitle": "No es un contador",
-    "@noACounterAppBarTitle": {
-        "description": "Esta app no es un contador"
-    }
+    "fizzBuzzAppBarTitle": "FizzBuzz"
 }
