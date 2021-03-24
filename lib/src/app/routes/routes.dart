@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/src/features/home/home.screen.dart';
+import 'package:fizzbuzz/src/features/home/home.screen.dart';
 
 class AppRoutes {
   late Map<String, WidgetBuilder> _routes;

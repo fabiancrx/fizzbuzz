@@ -1,6 +1,6 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:template/src/app/service_locator.dart';
+import 'package:fizzbuzz/src/app/service_locator.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

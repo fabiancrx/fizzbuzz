@@ -2,9 +2,9 @@ import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:template/r.dart';
-import 'package:template/src/app/service_locator.dart';
-import 'package:template/src/app/services/navigation.dart';
+import 'package:fizzbuzz/r.dart';
+import 'package:fizzbuzz/src/app/service_locator.dart';
+import 'package:fizzbuzz/src/app/services/navigation.dart';
 
 import 'routes/routes.dart';
 

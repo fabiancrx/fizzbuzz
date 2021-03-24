@@ -2,7 +2,7 @@ import 'package:get_it/get_it.dart';
 
 import 'services/navigation.dart';
 
-export 'package:template/src/shared/extensions.dart';
+export 'package:fizzbuzz/src/shared/extensions.dart';
 
 GetIt service = GetIt.instance;
 
