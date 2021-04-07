@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:fizzbuzz/src/app/service_locator.dart';
 import 'package:fizzbuzz/src/features/fizzbuzz/fizzbuzz.dart';
 import 'package:flutter/material.dart';
+import 'package:supercharged/supercharged.dart';
 
 class FizzBuzzPage extends StatelessWidget {
   late final List<String> _fizzBuzzes = 1.rangeTo(100).map(fizzBuzz).toList();

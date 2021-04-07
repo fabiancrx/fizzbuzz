@@ -4,14 +4,13 @@ import 'dart:developer';
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'src/app/app.dart';
-import 'src/app/service_locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Inject services [ inject.dart ]
-  await inject();
+
   // Force portrait mode
   await SystemChrome.setPreferredOrientations(
       <DeviceOrientation>[DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
@@ -23,7 +22,7 @@ void main() async {
 }
 
 /// Widget that injects the different dependencies needed for inheritedWidgets or other packages to work
-/// It is a widget and not a function so it can be const and avoid rebuild
+/// It is a widget and not a function so it can be const and avoid rebuilds (but won't change on hot reload)
 class Dependencies extends StatelessWidget {
   final Widget wrapped;
 
@@ -31,8 +30,7 @@ class Dependencies extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RootRestorationScope(
-      restorationId: 'root',
+    return ProviderScope(
       child: EasyDynamicThemeWidget(child: wrapped),
     );
   }
