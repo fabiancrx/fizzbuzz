@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fizzbuzz/src/features/fizzbuzz/fizzbuzz.dart';
 
-import '../lib/src/app/service_locator.dart';
+import '../../lib/src/app/service_locator.dart';
 
 void main() {
   late int start;
@@ -38,6 +38,14 @@ void main() {
       var multiplesOfFiveAndThree= start.rangeTo(end).where((e) => e % 5 == 0&& e%3==0).toList();
       for(var it in multiplesOfFiveAndThree){
         expect(fizzBuzz(it), equals('FizzBuzz'),reason: '$it is not multiple of 15');
+      }
+    });
+
+    test('GIVEN a list of numbers in a range  WHEN applied the fizzbuzz function then it returns FizzBuzz', () {
+
+      var nonMultiplesOfFiveOrThree= start.rangeTo(end).where((e) => e % 5 != 0&& e%3!=0).toList();
+      for(var it in nonMultiplesOfFiveOrThree){
+        expect(fizzBuzz(it), equals('$it'));
       }
     });
 
