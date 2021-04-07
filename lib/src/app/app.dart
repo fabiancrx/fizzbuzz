@@ -1,6 +1,5 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:fizzbuzz/l10n/l10n.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fizzbuzz/r.dart';
@@ -29,11 +28,7 @@ class App extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
         routes: AppRoutes().routes,
         initialRoute: '/',
-      )
-
-
-
-    ;
+      );
 
 
   }

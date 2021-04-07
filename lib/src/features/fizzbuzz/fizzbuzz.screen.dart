@@ -4,16 +4,19 @@ import 'package:fizzbuzz/src/features/fizzbuzz/fizzbuzz.dart';
 import 'package:flutter/material.dart';
 
 class FizzBuzzPage extends StatelessWidget {
-  final int start;
-  final int end;
   late final List<String> _fizzBuzzes = 1.rangeTo(100).map(fizzBuzz).toList();
 
-  FizzBuzzPage({Key? key, required this.start, required this.end}) : super(key: key);
+  FizzBuzzPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemBuilder: (ctx, i) {
-      return ListTile(leading: AutoSizeText('No: ${i+1}'), title: Center(child: AutoSizeText(_fizzBuzzes[i])));
-    },itemCount: _fizzBuzzes.length,);
+    return ListView.builder(
+      itemBuilder: (ctx, i) {
+        final itemNumber = 'No: ${i + 1}';
+        return ListTile(
+            leading: AutoSizeText(itemNumber, key: Key(itemNumber)), title: Center(child: Text(_fizzBuzzes[i])));
+      },
+      itemCount: _fizzBuzzes.length,
+    );
   }
 }
