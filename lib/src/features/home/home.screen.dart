@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
         title: const Text('FizzBuzz', maxLines: 2),
         leading: EasyDynamicThemeBtn(),
       ),
-      body: FizzBuzzPage(),
+      body:const FizzBuzzPage(),
     );
   }
 }
